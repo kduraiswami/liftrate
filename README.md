@@ -1,0 +1,1 @@
+This application will help people share, rate and improve daily workout plans
