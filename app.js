@@ -10,8 +10,19 @@ app.controller('MainCtrl', [
 		{title: 'Full Superset', upvotes: 15},
 		];
 
-		$scope.addPost = function() {
-			$scope.workouts.push({title: 'A new workout', upvotes: 3})
+		$scope.incrementUpvotes = function(workout) {
+			workout.upvotes += 1;
 		}
+
+		$scope.decrementUpvotes = function(workout){
+			workout.upvotes -= 1;g
+		}
+
+		$scope.addWorkout = function() {
+			if(!$scope.title || $scope.title === '') { return; }
+			$scope.workouts.push({title: $scope.title, upvotes: 0})
+			$scope.title = '';
+		}
+
 	}
 ]);
