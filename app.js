@@ -14,6 +14,10 @@ app.controller('MainCtrl', [
 			workout.upvotes += 1;
 		}
 
+		$scope.decrementUpvotes = function(workout){
+			workout.upvotes -= 1;g
+		}
+
 		$scope.addWorkout = function() {
 			if(!$scope.title || $scope.title === '') { return; }
 			$scope.workouts.push({title: $scope.title, upvotes: 0})

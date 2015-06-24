@@ -7,6 +7,7 @@
 <body ng-app="liftRate" ng-controller="MainCtrl">
   <div ng-repeat="workout in workouts | orderBy: '-upvotes'">
     <span ng-click="incrementUpvotes(workout)">^</span>
+    <span ng-click="decrementUpvotes(workout)">_</span>
     {{workout.title}} - upvotes: {{workout.upvotes}}
   </div>
 
