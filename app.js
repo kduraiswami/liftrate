@@ -11,7 +11,7 @@ app.controller('MainCtrl', [
 		];
 
 		$scope.addPost = function() {
-			$scope.posts.push({title: 'A new post', upvotes: 0})
+			$scope.workouts.push({title: 'A new workout', upvotes: 3})
 		}
 	}
 ]);

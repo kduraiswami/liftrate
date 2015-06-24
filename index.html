@@ -8,5 +8,7 @@
   <div ng-repeat="workout in workouts | orderBy: '-upvotes'">
       {{workout.title}} - upvotes: {{workout.upvotes}}
   </div>
+  <button ng-click="addPost()">Post</button>
+
 </body>
 </html>
