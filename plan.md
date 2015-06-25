@@ -1,5 +1,3 @@
-I can build a single page app on MEAN technologies
-
 Content
 The index page will show all workouts by all users
 if you click a specific workout the show page will be a separate view with a rating and comments
