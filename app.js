@@ -1,4 +1,4 @@
-var app = angular.module('liftRate', []);
+var app = angular.module('liftRate', ['ui.router']);
 
 app.factory('workouts', [function(){
 	console.log('touched the factory')
@@ -7,6 +7,21 @@ app.factory('workouts', [function(){
 	};
 	return o;
 }])
+
+app.config([
+	'$stateProvider',
+	'$urlRouterProvider',
+	function($stateProvider, $urlRouterProvider){
+
+		$stateProvider
+		.state('home', {
+			url: '/home', 
+			templateUrl: 'home.html',
+			controller: 'MainCtrl'
+		});
+
+		$urlRouterProvider.otherwise('home');
+	}])
 
 app.controller('MainCtrl', [
 	'$scope',
