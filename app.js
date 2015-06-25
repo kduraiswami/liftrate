@@ -1,9 +1,19 @@
 var app = angular.module('liftRate', []);
 
+app.factory('workouts', [function(){
+	console.log('touched the factory')
+	var o = {
+		workouts: []
+	};
+	return o;
+}])
+
 app.controller('MainCtrl', [
 	'$scope',
-	function($scope){
+	'workouts',
+	function($scope, workouts){
 		$scope.test = 'Hello world!';
+		$scope.workouts = workouts.workouts
 		$scope.workouts = [
 		{title: 'Lower Workout', upvotes: 5},
 		{title: 'Pec Blast', upvotes: 2},
@@ -25,4 +35,4 @@ app.controller('MainCtrl', [
 		}
 
 	}
-]);
+	]);
