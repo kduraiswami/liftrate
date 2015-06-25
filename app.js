@@ -10,8 +10,10 @@ app.factory('workouts', [function(){
 
 app.controller('MainCtrl', [
 	'$scope',
-	function($scope){
+	'workouts',
+	function($scope, workouts){
 		$scope.test = 'Hello world!';
+		$scope.workouts = workouts.workouts
 		$scope.workouts = [
 		{title: 'Lower Workout', upvotes: 5},
 		{title: 'Pec Blast', upvotes: 2},
