@@ -6,13 +6,13 @@ if you click a specific workout the show page will be a separate view with a rat
 a user can rate a workout on a 5 star scale and write a comment
 
 Workout Form
-personal fitness goal
 Time goal of workout
 give example text ("Dumbell incline press 10 reps - 35 lbs - 4 sets - rest 30 sec")
 individual exercises
 explanation field 
 
 User panel 
+personal fitness goal
 I can visit a workout I previously put online and fill out how I actually did
 I can rate from too no sweat , some sweat , at my limit , pushed my limit , upchucked on a five point scale 
 
