@@ -1,5 +1,13 @@
 var app = angular.module('liftRate', []);
 
+app.factory('workouts', [function(){
+	console.log('touched the factory')
+	var o = {
+		workouts: []
+	};
+	return o;
+}])
+
 app.controller('MainCtrl', [
 	'$scope',
 	function($scope){
@@ -25,4 +33,4 @@ app.controller('MainCtrl', [
 		}
 
 	}
-]);
+	]);
