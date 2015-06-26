@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var schema = mongoose.Schema;
 
 // create workout schema
-var workoutSchema = new Schema({
+var workoutSchema = new schema({
 	title:  String,
 	time: String, 
 	exercises:   String,
