@@ -1,6 +1,6 @@
 var Workout = require('./models/workout');
 var path = require('path')
-path.join(__dirname, 'public/index.html')
+path.join(__dirname, './public/index.html')
 
     module.exports = function(app) {
         app.get('/api/workouts', function(req, res) {
