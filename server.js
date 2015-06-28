@@ -4,7 +4,9 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 //import config file
+var mongoose = require('mongoose')
 var db = require('./config/db');
+
 //set default 8080
 var port = process.env.PORT || 8080;
 //put body packages into use of application
