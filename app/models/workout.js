@@ -15,3 +15,15 @@ var workoutSchema = new schema({
 		stars:  Number
 	}
 });
+
+// create individual workout
+var Workout = mongoose.model('Workout', workoutSchema);
+var bigOne = new Workout({
+	title: "Hard Workout",
+	time: "45 min",
+	exercises: "squats, jumps, pushups, burpies",
+}) 
+
+
+
+console.log(bigOne)

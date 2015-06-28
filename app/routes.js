@@ -1,4 +1,6 @@
 var Workout = require('./models/workout');
+var path = require('path')
+path.join(__dirname, 'public/index.html')
 
     module.exports = function(app) {
         app.get('/api/workouts', function(req, res) {
@@ -13,7 +15,7 @@ var Workout = require('./models/workout');
 
         // route to handle all angular requests
         app.get('*', function(req, res) {
-            res.sendfile('./public/views/index.html');
+            res.sendfile(path);
         });
 
     };
