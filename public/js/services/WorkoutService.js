@@ -3,7 +3,7 @@ angular.module('WorkoutService', []).factory('Workout', ['$http', function($http
 
 		get : function() {
 			return $http.get('/api/workouts');
-		}
+		},
 
 		create : function(workoutData) {
 			return $http.post('api/nerds', nerdData);

@@ -24,4 +24,6 @@ var bigOne = new Workout({
 	exercises: "squats, jumps, pushups, burpies",
 }) 
 
+
+
 console.log(bigOne)

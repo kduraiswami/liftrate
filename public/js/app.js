@@ -1,1 +1,1 @@
-angular.module('liftRaterApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'WorkoutCtrl', 'WorkoutService']g);
+angular.module('liftRaterApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'WorkoutCtrl', 'WorkoutService']);
