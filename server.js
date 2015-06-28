@@ -4,8 +4,10 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 //import config file
-var mongoose = require('mongoose')
-var db = require('./config/db');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
 
 //set default 8080
 var port = process.env.PORT || 8080;
