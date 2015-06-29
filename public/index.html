@@ -30,7 +30,7 @@
             <h1>My exercises today: </h1>
         </div>
 
-         <!-- all workouts -->
+        <!-- all workouts -->
         <div id="workout-list" class="row">
             <div class="col-sm-4 col-sm-offset-4">
 
@@ -41,6 +41,22 @@
                     </label>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- create workouts -->
+        <div id="workout-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                        <input type="text" class="form-control input-lg text-center" placeholder="400 pound squats" ng-model="formData.text">
+
+                    </div>
+
+                    <!-- createWorkout() WILL CREATE NEW workoutS -->
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createWorkout()">Add</button>
+                </form>
             </div>
         </div>
 
