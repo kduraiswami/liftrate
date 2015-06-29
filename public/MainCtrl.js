@@ -17,7 +17,7 @@ function mainController($scope, $http) {
     $scope.createWorkout = function() {
         $http.post('/api/workouts', $scope.formData)
             .success(function(data) {
-                $scope.formData = {}; // clear the form so our user is ready to enter another
+                $scope.formData = {};
                 $scope.workouts = data;
                 console.log(data);
             })
