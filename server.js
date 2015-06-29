@@ -4,8 +4,9 @@ var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
+require('dotenv').load();
 
-mongoose.connect('mongodb://<user>:<pass>@apollo.modulusmongo.net:27017/oja9Byve');
+mongoose.connect('mongodb://'+ process.env.DB_USER + ':'+ process.env.DB_PASS + process.env.DB_HOST);
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
