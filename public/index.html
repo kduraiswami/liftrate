@@ -1,0 +1,66 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="liftRate">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lift Rater</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <style>
+    html                    { overflow-y:scroll; }
+    body                    { padding-top:50px; }
+    #exercises              { margin-bottom:30px; }
+    </style>
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="MainCtrl.js"></script>
+
+</head>
+<body ng-controller="mainController">
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1>My exercises today: </h1>
+        </div>
+
+        <!-- all workouts -->
+        <div id="workout-list" class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+
+                <!-- LOOP OVER THE workouts IN $scope.workouts -->
+                <div class="checkbox" ng-repeat="workout in workouts">
+                    <label>
+                        <input type="checkbox" ng-click="deleteWorkout(workout._id)"> {{ workout.text }}
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- create workouts -->
+        <div id="workout-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                        <input type="text" class="form-control input-lg text-center" placeholder="400 pound squats" ng-model="formData.text">
+
+                    </div>
+
+                    <!-- createWorkout() WILL CREATE NEW workoutS -->
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createWorkout()">Add</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
