@@ -46,4 +46,9 @@ module.exports = function(app){
 		});
 	});
 
+	//add single page logic in the bottom of other routes
+	app.get('*', function(req, res) {
+        res.sendfile('./public/index.html');
+    });
+
 }
