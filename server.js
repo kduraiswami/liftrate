@@ -4,9 +4,11 @@ var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
+var database = require('./config/database')
 require('dotenv').load();
 
-mongoose.connect('mongodb://'+ process.env.DB_USER + ':'+ process.env.DB_PASS + process.env.DB_HOST);
+//actually connect to remote db
+mongoose.connect(database.url)
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
