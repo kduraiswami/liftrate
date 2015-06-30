@@ -10,6 +10,25 @@ module.exports = function(app){
 		});
 	});
 
+	//Create
+	app.post('/api/workouts', function(req, res) {
+
+		Workout.create({
+			text : req.body.text,
+			done : false
+		}, function(err, workout) {
+			if (err)
+				res.send(err);
+
+			Workout.find(function(err, workouts) {
+				if (err)
+					res.send(err)
+				res.json(workouts);
+			});
+		});
+
+	});
+	
 	//Destroy
 	app.delete('/api/workouts/:workout_id', function(req, res) {
 		Workout.remove({
