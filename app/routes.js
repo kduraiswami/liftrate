@@ -10,5 +10,21 @@ module.exports = function(app){
 		});
 	});
 
+	//Destroy
+	app.delete('/api/workouts/:workout_id', function(req, res) {
+		Workout.remove({
+			_id : req.params.workout_id
+		}, function(err, workout) {
+			if (err)
+				res.send(err);
+
+
+			Workout.find(function(err, workouts) {
+				if (err)
+					res.send(err)
+				res.json(workouts);
+			});
+		});
+	});
 
 }
