@@ -12,7 +12,6 @@ module.exports = function(app){
 
 	//Create
 	app.post('/api/workouts', function(req, res) {
-
 		Workout.create({
 			text : req.body.text,
 			done : false

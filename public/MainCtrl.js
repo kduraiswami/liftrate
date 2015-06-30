@@ -3,7 +3,6 @@ var liftRate = angular.module('liftRate', []);
 function mainController($scope, $http) {
     $scope.formData = {};
 
-    // when landing on the page, get all workouts and show them
     $http.get('/api/workouts')
         .success(function(data) {
             $scope.workouts = data;
@@ -13,7 +12,6 @@ function mainController($scope, $http) {
             console.log('Error: ' + data);
         });
 
-    // when submitting the add form, send the text to the node API
     $scope.createWorkout = function() {
         $http.post('/api/workouts', $scope.formData)
             .success(function(data) {
@@ -26,7 +24,7 @@ function mainController($scope, $http) {
             });
     };
 
-    // delete a Workout after checking it
+    
     $scope.deleteWorkout = function(id) {
         $http.delete('/api/workouts/' + id)
             .success(function(data) {
